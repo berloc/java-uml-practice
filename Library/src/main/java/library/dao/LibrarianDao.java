@@ -8,6 +8,8 @@ import library.model.Book;
 public interface LibrarianDao {
 
     Boolean issueStatus();
-    Book searchBook(int bookID);
+    Book getBook(String title);
+    Book getBook(int bookID);
     Boolean verifyMember(int patronID);
+    Boolean issueBook(String issue);
 }
