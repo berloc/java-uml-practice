@@ -9,6 +9,15 @@ import library.model.Patron;
  */
 public class LibrarianDaoMem implements LibrarianDao {
 
+    private static LibrarianDaoMem INSTANCE;
+
+    public static LibrarianDaoMem getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new LibrarianDaoMem();
+        }
+        return INSTANCE;
+    }
+
 
     public Boolean issueStatus() {
         return null;

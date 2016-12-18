@@ -9,6 +9,15 @@ import library.model.Book;
 public class PatronDaoMem implements PatronDao {
 
 
+    private static PatronDaoMem INSTANCE;
+
+    public static PatronDaoMem getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new PatronDaoMem();
+        }
+        return INSTANCE;
+    }
+
 
     public Book search(int bookID) {
         for (Book book: LibraryDaoMem.getInstance().getBookList()) {

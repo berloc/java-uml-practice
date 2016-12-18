@@ -15,5 +15,4 @@ public interface LibraryDao {
     void addToPatronList(Patron patron);
     Patron getPatron(String name);
     Patron getPatron(int patronID);
-
 }

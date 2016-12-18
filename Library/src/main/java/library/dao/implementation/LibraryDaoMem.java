@@ -13,11 +13,11 @@ import java.util.List;
  */
 public class LibraryDaoMem implements LibraryDao {
 
-    private static LibraryDaoMem INSTANCE;
     private List<Book>bookList = new ArrayList();
     private List<Librarian>librarianList = new ArrayList();
     private List<Patron>patronList = new ArrayList();
     private List<String>requestList = new ArrayList();
+    private static LibraryDaoMem INSTANCE;
 
     public static LibraryDaoMem getInstance() {
         if (INSTANCE == null) {
