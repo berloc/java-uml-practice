@@ -1,5 +1,7 @@
 package library.model;
 
+import library.controller.GenerateID;
+
 /**
  * Created by berloc on 2016.12.17..
  */
@@ -12,9 +14,9 @@ public class Library {
     public Library() {
     }
 
-    public Library(String location, int bookID) {
+    public Library(String location) {
         this.location = location;
-        this.bookID = bookID;
+        this.bookID = GenerateID.generateId();
     }
 
     public String getLocation() {

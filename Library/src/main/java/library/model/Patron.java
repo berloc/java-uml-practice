@@ -1,5 +1,7 @@
 package library.model;
 
+import library.controller.GenerateID;
+
 /**
  * Created by berloc on 2016.12.17..
  */
@@ -15,9 +17,9 @@ public class Patron {
     public Patron() {
     }
 
-    public Patron(String name, int patronID, String address, int phoneNumber, String type) {
+    public Patron(String name, String address, int phoneNumber, String type) {
         this.name = name;
-        this.patronID = patronID;
+        this.patronID = GenerateID.generateId();
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.type = type;

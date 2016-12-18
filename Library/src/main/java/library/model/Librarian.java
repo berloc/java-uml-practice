@@ -1,5 +1,7 @@
 package library.model;
 
+import library.controller.GenerateID;
+
 /**
  * Created by berloc on 2016.12.17..
  */
@@ -14,9 +16,9 @@ public class Librarian {
     public Librarian() {
     }
 
-    public Librarian(String name, int librarianID) {
+    public Librarian(String name) {
         this.name = name;
-        this.librarianID = librarianID;
+        this.librarianID = GenerateID.generateId();
     }
 
     public String getName() {
